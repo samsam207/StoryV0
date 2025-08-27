@@ -1,0 +1,289 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 352 100% 99%;
+    --foreground: 342 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 342 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 342 15% 15%;
+
+    --primary: 345 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 20% 92%;
+    --secondary-foreground: 342 15% 25%;
+
+    --muted: 340 15% 95%;
+    --muted-foreground: 342 10% 45%;
+
+    --accent: 340 60% 85%;
+    --accent-foreground: 342 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 25% 90%;
+    --input: 340 25% 90%;
+    --ring: 345 75% 60%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 342 20% 8%;
+    --foreground: 340 20% 92%;
+    --card: 342 20% 10%;
+    --card-foreground: 340 20% 90%;
+    --popover: 342 20% 10%;
+    --popover-foreground: 340 20% 90%;
+    --primary: 345 75% 70%;
+    --primary-foreground: 342 20% 8%;
+    --secondary: 342 15% 15%;
+    --secondary-foreground: 340 20% 85%;
+    --muted: 342 15% 12%;
+    --muted-foreground: 342 10% 60%;
+    --accent: 342 15% 15%;
+    --accent-foreground: 340 20% 85%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 340 20% 92%;
+    --border: 342 15% 15%;
+    --input: 342 15% 15%;
+    --ring: 345 75% 70%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* Arabic text styling */
+  .arabic-text {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-arabic {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(345, 75%, 60%), hsl(340, 60%, 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .btn-glow {
+    box-shadow: 0 4px 20px hsla(345, 75%, 60%, 0.4);
+  }
+  
+  .btn-glow:hover {
+    box-shadow: 0 6px 30px hsla(345, 75%, 60%, 0.6);
+  }
+
+  /* Enhanced shadow utilities */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Gradient backgrounds */
+  .bg-rose-gradient {
+    background: linear-gradient(135deg, hsl(345, 75%, 60%) 0%, hsl(340, 60%, 70%) 100%);
+  }
+
+  .bg-pink-gradient {
+    background: linear-gradient(135deg, hsl(330, 70%, 65%) 0%, hsl(340, 60%, 70%) 100%);
+  }
+}
+
+/* Custom animations for Egyptian theme */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(244, 63, 94, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(244, 63, 94, 0.6); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Glass morphism utilities */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Enhanced text rendering for Arabic */
+.text-rendering-optimized {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle animations for better UX */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Custom scrollbar for modern look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(244, 114, 182, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #f472b6, #ec4899);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ec4899, #db2777);
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(244, 63, 94, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f43f5e, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #e11d48, #db2777);
+}
