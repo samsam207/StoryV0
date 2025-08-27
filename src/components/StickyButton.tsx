@@ -23,7 +23,7 @@ const StickyButton = () => {
         content_category: 'CTA Button'
       });
     }
-    window.open('/bikini-bliss-landing-main', '_blank');
+    window.open('https://landing-v0-zeta.vercel.app', '_blank');
   };
 
   if (!isVisible) return null;

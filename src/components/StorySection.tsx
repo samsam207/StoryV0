@@ -106,7 +106,7 @@ const StorySection = () => {
                     content_category: 'CTA Button'
                   });
                 }
-                window.open('/bikini-bliss-landing-main', '_blank');
+                window.open('https://landing-v0-zeta.vercel.app', '_blank');
               }}
             >
               ⭐ شوفي الحل اللي لقيته
@@ -194,9 +194,9 @@ const StorySection = () => {
                 <span>💜</span> "لو انتِ بتمري بنفس اللي مريت بيه... ده الكريم اللي استعملته"
               </p>
             </div>
-            
-            <a 
-              href="#product" 
+
+              <a 
+                href="#product" 
               className="inline-flex items-center bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white px-8 sm:px-12 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 hover:scale-105 shadow-xl"
               onClick={(e) => {
                 e.preventDefault();
@@ -207,7 +207,7 @@ const StorySection = () => {
                     content_category: 'CTA Button'
                   });
                 }
-                window.open('/bikini-bliss-landing-main', '_blank');
+                window.open('https://landing-v0-zeta.vercel.app', '_blank');
               }}
             >
               ✨ شوفي الكريم من هنا
