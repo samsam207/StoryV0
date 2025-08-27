@@ -5,7 +5,7 @@ const FinalCTA = () => {
   // Add click handler for the CTA button that opens landing page
   const handleCTAClick = () => {
     // Replace with actual landing page URL - for now redirecting to bikini-bliss-landing
-    window.open('https://landing-v0-zeta.vercel.app', '_blank');
+    window.open('https://lp.digishop.autos/', '_blank');
   };
 
   return (

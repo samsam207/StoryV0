@@ -106,7 +106,7 @@ const StorySection = () => {
                     content_category: 'CTA Button'
                   });
                 }
-                window.open('https://landing-v0-zeta.vercel.app', '_blank');
+                window.open('https://lp.digishop.autos/', '_blank');
               }}
             >
               ⭐ شوفي الحل اللي لقيته
@@ -207,7 +207,7 @@ const StorySection = () => {
                     content_category: 'CTA Button'
                   });
                 }
-                window.open('https://landing-v0-zeta.vercel.app', '_blank');
+                window.open('https://lp.digishop.autos/', '_blank');
               }}
             >
               ✨ شوفي الكريم من هنا
